@@ -20,18 +20,16 @@ class Arrays {
         System.out.println(min);
         System.out.print("The max value is: ");
         System.out.println(max);
-       int result = linearSearch(nums,6);
-        if (result==1){
-            System.out.print("Target found");
-        }else{
-            System.out.print("Target not found!");
-        }
+       int result = linearSearch(nums,5);
+            System.out.print("Target found" + result);
+
+
     }
     static int linearSearch(int[]arr,int target){
         for (int i = 0;i< arr.length;i++){
             int current = arr[i];
             if(current==target){
-                return 1;
+                return i;
             }
         }
         return -1;
