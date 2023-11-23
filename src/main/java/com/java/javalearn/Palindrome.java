@@ -19,6 +19,9 @@ public class Palindrome {
         return true;
     }
     static boolean isPalindrom(String str){
+        if (str==null||str.length()==0){
+            return true;
+        }
         str = str.toLowerCase();
 
             int start = 0;
