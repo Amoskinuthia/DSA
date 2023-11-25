@@ -35,4 +35,32 @@ class Arrays {
         return -1;
     }
 
+    static void manipulate() {
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        // Iterating through the array using a for loop
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+
+        // Iterating through the array using an enhanced for loop (for-each)
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+    }
+
+   static void man() {
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        // Changing the value of an array element
+        numbers[2] = 10;
+
+        // Printing the modified array
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+    }
+
+
+
 }

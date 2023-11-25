@@ -3,12 +3,10 @@ package com.java.javalearn;
 class BinarySearch{
     public static void main(String[] args) {
         int [] nums = {2,3,5,8,19};
-        int result = binarySearch(nums,6);
-        if (result==1){
-            System.out.print("Target found");
-        }else{
-            System.out.print("Target not found!");
-        }
+        int result = binarySearch(nums,5);
+
+            System.out.println("Target found at index :"+result);
+
     }
 
     static int binarySearch(int [] nums,int target){
@@ -18,7 +16,7 @@ class BinarySearch{
         while (start<=end){
             mid = start + ((end - start) /2);
             if(nums[mid]==target){
-                return 1;
+                return mid;
             } else if (nums[mid]>target) {
                 end = mid - 1;
             }else {
