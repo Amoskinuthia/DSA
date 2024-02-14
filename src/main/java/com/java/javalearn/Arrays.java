@@ -3,6 +3,10 @@
 class Arrays {
     public static void main(String[] args) {
         int [] nums = {2,3,5,8,19};
+        int [] arr = {2,3,5,8,19};
+        System.out.println(java.util.Arrays.toString(arr));
+        reverse(arr,0,4);
+        System.out.println(java.util.Arrays.toString(arr));
         int min = nums[0];
         int max = nums[0];
         for (int i=1 ;i<nums.length;i++){
@@ -59,6 +63,22 @@ class Arrays {
         for (int num : numbers) {
             System.out.println(num);
         }
+    }
+
+    static void reverse(int[] arr,int start,int end){
+        while(start<end){
+            swap(arr,start,end);
+            start++;
+            end--;
+        }
+
+    }
+
+    public static void swap(int[] arr,int start,int end){
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end]= temp;
+
     }
 
 
