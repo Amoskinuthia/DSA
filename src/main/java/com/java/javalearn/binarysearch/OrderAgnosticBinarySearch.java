@@ -1,4 +1,4 @@
-package com.java.javalearn;
+package com.java.javalearn.binarysearch;
 
 import java.util.Arrays;
 
@@ -35,7 +35,6 @@ public class OrderAgnosticBinarySearch {
                 }
             }
         }
-
         return -1;
     }
 }
