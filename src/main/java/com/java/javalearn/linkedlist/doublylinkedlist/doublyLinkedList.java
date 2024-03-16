@@ -17,11 +17,35 @@ public class doublyLinkedList {
         head = node;
         size++;
     }
+    public void insertLast(int val){
+        Node node = new Node(val);
+        node.next = null;
+        Node temp = head;
+        if(head==null){
+            node.previous= null;
+            head=node;
+            return;
+        }
+
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next=node;
+        node.previous=temp;
+    }
     public void display(){
         Node temp = head;
+        Node last = null;
         while (temp!=null){
             System.out.print(temp.value + "->");
+            last = temp;
             temp = temp.next;
+        }
+        System.out.println("End");
+        System.out.println("REVERSE");
+        while (last!=null){
+            System.out.print(last.value + "->");
+            last = last.previous;
         }
         System.out.println("End");
     }
