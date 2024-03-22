@@ -33,6 +33,30 @@ public class doublyLinkedList {
         temp.next=node;
         node.previous=temp;
     }
+
+    public void insert(int after,int val){
+        Node node = new Node(val);
+        Node nodeAfter = getNode(after);
+        if (nodeAfter==null){
+            return;
+        }
+        node.previous = nodeAfter;
+        if(nodeAfter.next!=null){
+            node.next = nodeAfter.next;
+            nodeAfter.next.previous=node;
+        }
+        nodeAfter.next = node;
+
+    }
+
+    private Node getNode(int after) {
+        Node temp = head;
+        while (temp.value!=after){
+            temp = temp.next;
+        }
+        return temp;
+    }
+
     public void display(){
         Node temp = head;
         Node last = null;

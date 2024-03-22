@@ -8,7 +8,7 @@ public class Node {
         list.insertFirst(6);
         list.insertFirst(8);
         list.insertFirst(10);
-//        list.insert(50,3);
+        list.insert(6,3);
         list.insertLast(99);
 //        list.display();
 //        list.deleteFirst();
